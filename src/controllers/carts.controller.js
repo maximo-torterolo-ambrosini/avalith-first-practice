@@ -38,8 +38,9 @@ const getBiggerCarts = (cartsRepository, usersRepository) => async (httpRequest)
             carts
                 .filter((cart) => cart.products.length >= CART_SIZE)
                 .map(async ({ userId, ...rest }) => {
-                    const user = await usersRepository.getById(userId)
-                    return { user, ...rest }
+                    const { username } = await usersRepository.getById(userId)
+
+                    return { username, ...rest }
                 })
         )
 
