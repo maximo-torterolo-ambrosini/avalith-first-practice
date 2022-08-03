@@ -43,9 +43,11 @@ const getProductsByPrices = (productsRepository) => async (httpRequest) => {
     const { order } = httpRequest.query
     try {
         let products = await productsRepository.getAll()
-        products = products.map((product) => {
-            return { id: product.id, title: product.title, price: product.price }
-        })
+        products = products
+            .map((product) => {
+                return { id: product.id, title: product.title, price: product.price }
+            })
+            .sort((a, b) => a.price - b.price)
         /*
          * by default if order is not specified, it will be ascending
          * products are already sorted by id, so we just need to reverse the array
