@@ -29,9 +29,10 @@ const getUser = (usersRepository) => async (httpRequest) => {
     }
 }
 const getFirstsUsers = (usersRepository) => async (httpRequest) => {
+    const USERS_LIMIT = 3
     try {
         const users = await usersRepository.getAll()
-        return new HttpResponse(OK, users.slice(0, 3), JSON, {})
+        return new HttpResponse(OK, users.slice(0, USERS_LIMIT), JSON, {})
     } catch (error) {
         throw new HttpError(error.message, INTERNAL_SERVER_ERROR)
     }
