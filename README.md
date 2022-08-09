@@ -1,4 +1,7 @@
 # avalith-first-practice
+
+### **Skiller name:** *Maximo Torterolo Ambrosini*
+
 This is the first practice project in Skill Factory by Avalith. Skill Factory is a Node.js Bootcamp.
 
 The practice stated that we create an API using [Fake Store API](https://fakestoreapi.com/) as the database.
