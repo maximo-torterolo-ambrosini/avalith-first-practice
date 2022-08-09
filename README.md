@@ -1,6 +1,7 @@
 # avalith-first-practice
 
 ### **Skiller name:** *Maximo Torterolo Ambrosini*
+### Warning: This project uses Node.js version: *>=v18.0.0* since it uses native fetch API that is not supported in previous versions without installing a dependency. Please install Node.js version >=v18.0.0 to run this project.
 
 This is the first practice project in Skill Factory by Avalith. Skill Factory is a Node.js Bootcamp.
 
