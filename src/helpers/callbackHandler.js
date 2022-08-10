@@ -1,7 +1,7 @@
 import HttpRequest from './http/HttpRequest.js'
 
 /**
- * @description creates a valid callback for express utilizing adapter pattern
+ * @description creates a valid callback for express utilizing adapter and decorator pattern
  * @param {function} controller - callback function to handle request
  * @returns {function} - callback function to handle request
  */
